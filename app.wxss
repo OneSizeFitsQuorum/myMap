@@ -1,0 +1,33 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.icon {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    margin-right: 10rpx;
+}
+
+.button {
+    color: #fff;
+    height: 100rpx;
+    width: 220rpx;
+    line-height: 100rpx;
+    font-size: 35rpx;
+    text-align: center;
+    background-color: rgb(62, 207, 142);
+    border-radius: 50rpx;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+map {
+    width: 750rpx;
+}
