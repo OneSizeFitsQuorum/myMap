@@ -7,7 +7,7 @@
 }
 
 .card_title {
-    font-size: 50rpx;
+    font-size: 40rpx;
     font-weight: 700;
 }
 
@@ -35,6 +35,9 @@
     margin: 5px;
     width: 730rpx;
     height: 80rpx;
+      display: flex;
+  align-items: center;
+  justify-content: center;  
 }
 
 .input-placeholder {

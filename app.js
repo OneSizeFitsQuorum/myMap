@@ -1,9 +1,6 @@
 const config = require('config.js');
 App({
     onLaunch: function(options) {
-        /**
-         * 初始化云开发
-         */
         if (wx.cloud) {
             wx.cloud.init({
                 traceUser: true,

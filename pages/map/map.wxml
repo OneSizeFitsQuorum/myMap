@@ -11,3 +11,5 @@
     <!-- 查看全部 -->
     <cover-view class="button all" bindtap="viewAll">全部</cover-view>
 </map>
+
+<van-toast id="van-toast" />

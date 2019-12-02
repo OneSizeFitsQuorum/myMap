@@ -1,6 +1,8 @@
 const app = getApp();
 const db = wx.cloud.database()
 const store = db.collection('store');
+import Search from '../../dist/search/index';
+import Screen from '../../dist/skeleton/index';
 Page({
 
     /**
@@ -10,22 +12,15 @@ Page({
         numbers: 0,
         stores: []
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function(options) {
         this.loadData();
     },
 
     loadData: function() {
         store.skip(this.data.numbers).get().then(res => {
-            /**
-             * 如果没有数据，就提示没有商户了，并返回。
-             */
             if (res.data.length == 0) {
                 wx.showToast({
-                    title: '没有别的店铺了！',
+                    title: '没有别的地点了！',
                     icon: 'none'
                 });
             } else {
@@ -44,7 +39,7 @@ Page({
     },
     
     navigateToSearch: function(e) {
-        wx.redirectTo({
+        wx.navigateTo({
             url: '../search/search',
         })
     }

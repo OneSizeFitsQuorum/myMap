@@ -7,28 +7,14 @@
         </block>
     </swiper>
 </block>
-<view>
-    <view class="title">
-        {{store.title}}
-    </view>
-    <view class="two_column">
-        <view class="contact" bindtap='callContact'>
-            {{store.contact}}</view>
-        <view class="star">
-            评分: {{store.star}}/10</view>
-    </view>
-    <view class="two_column">
-        <view class="per">
-            人均: {{store.price_per}}元</view>
-        <view class="keywords">
-            关键词: {{store.keywords}}</view>
-    </view>
 
+<view>
     <view class="address">
-        {{store.address}}</view>
+        想法:</view>
     <view class="notes">
-        点评: {{store.notes}}</view>
+        {{store.notes}}</view>
 </view>
+
 
 <block wx:if="{{isAdmin}}">
     <button class='button copy_path' bindtap='navigate'>导航</button>

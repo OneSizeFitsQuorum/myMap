@@ -1,12 +1,9 @@
-<input class="search_input" placeholder='点我开始搜索' bindinput="navigateToSearch" bindfocus="navigateToSearch"></input>
+
+<button class="search_input"  bindtap="navigateToSearch" >点我开始搜索</button>
 <block wx:for="{{stores}}" wx:key="_id">
     <navigator url="../info/info?id={{item._id}}">
         <view class="card">
-            <view class="card_title">{{item.title}}</view>
-            <view class="card_infobar">
-                <view class="card_address">{{item.address}}</view>
-                <view class="card_thumbsup">{{item.thumbs_up}}</view>
-            </view>
+            <view class="card_title">{{item.address}}</view>
         </view>
     </navigator>
 </block>

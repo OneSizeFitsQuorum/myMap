@@ -1,6 +1,7 @@
 const app = getApp();
 const db = wx.cloud.database()
 const store = db.collection('store');
+import Search from '../../dist/search/index';
 Page({
     data: {
         numbers: 0,
@@ -23,9 +24,10 @@ Page({
         this.loadData();
     },
 
-    loadData: function(keywords) {
+    loadData: function() {
+        console.log(this.data.keywords)
         store.skip(this.data.numbers).where({
-            title: db.RegExp({
+            notes: db.RegExp({
                 regexp: this.data.keywords,
                 options: 'i',
             })
@@ -46,8 +48,9 @@ Page({
         })
     },
     search: function(e) {
+        console.log(e)
         this.setData({
-            keywords: e.detail.value
+            keywords: e.detail
         }, res => {
             this.loadData();
         })

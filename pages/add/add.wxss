@@ -7,9 +7,8 @@ page {
 }
 
 .loactionGroup {
-    padding: 10rpx;
-    display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 input {
@@ -17,12 +16,12 @@ input {
     padding: 20rpx;
 }
 
-textarea {
-    background-color: #fff;
-    padding: 20rpx;
-    width: 710rpx;
+.all {
+     background-color: #fff;
 }
 
-.submit {
-    margin-top: 40rpx;
+textarea {
+    background-color: #fff;
+    width:100%;
 }
+
