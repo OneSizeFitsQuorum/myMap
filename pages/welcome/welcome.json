@@ -1,6 +1,5 @@
 {
     "navigationBarTitleText": "于士焜的旅游地图",
-    "enablePullDownRefresh": false,
     "disableScroll": true,
     "usingComponents": {
         "van-toast": "../../dist/toast/index"

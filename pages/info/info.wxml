@@ -1,12 +1,11 @@
-<block wx:if="{{store.images}}">
-    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
-        <block wx:for="{{store.images}}">
-            <swiper-item>
-                <image src="{{item}}" data-url="{{item}}" class="slide-image" mode="aspectFit" bindtap="tapImage" />
-            </swiper-item>
-        </block>
-    </swiper>
-</block>
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
+    <block wx:for="{{store.images}}">
+        <swiper-item>
+            <image src="{{item}}" data-url="{{item}}" class="slide-image" mode="aspectFit" bindtap="tapImage" />
+        </swiper-item>
+    </block>
+</swiper>
+
 
 <view>
     <view class="address">

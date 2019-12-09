@@ -1,6 +1,3 @@
 {
-    "navigationBarTitleText": "全部地点",
-    "usingComponents": {
-        "van-search": "../../dist/search/index"
-    }
+    "navigationBarTitleText": "全部地点"
 }

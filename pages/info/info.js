@@ -26,7 +26,7 @@ Page({
             current: e.currentTarget.dataset.url
         })
     },
-    
+
     navigate: function(e) {
         wx.openLocation({
             latitude: this.data.store.latitude,
@@ -38,7 +38,7 @@ Page({
     deleteItem: function(e) {
         wx.showModal({
             title: '删除确认',
-            content: '您真的要删除' + this.data.store.title + "么？",
+            content: '您真的要删除么？',
             success: res => {
                 if (res.confirm) {
                     store.doc(this.data.store._id).remove().then(res => {
@@ -53,11 +53,10 @@ Page({
                         })
                     }).catch(error => {
                         wx.showToast({
-                            title: '删除失败！请添加微信 ixiqin_com 排查问题',
+                            title: '删除失败！',
+                            icon: 'fail',
                         })
                     })
-                } else if (res.cancel) {
-                    console.log('用户点击取消')
                 }
             }
         })

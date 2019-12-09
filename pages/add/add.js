@@ -61,6 +61,11 @@ Page({
             Toast.fail('请地图选址');
             return
         }
+        console.log(this.data.fileList)
+        if (this.data.fileList.length == 0) {
+            Toast.fail('请上传图片');
+            return
+        }
         Toast.loading({
             duration: 0,
             mask: true,

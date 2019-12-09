@@ -1,8 +1,7 @@
 const app = getApp();
 const db = wx.cloud.database()
 const store = db.collection('store');
-import Search from '../../dist/search/index';
-import Screen from '../../dist/skeleton/index';
+
 Page({
 
     /**
@@ -12,32 +11,50 @@ Page({
         numbers: 0,
         stores: []
     },
-    onLoad: function(options) {
-        this.loadData();
+
+
+    onShow: function() {
+        this.loadData(false);
     },
 
-    loadData: function() {
-        store.skip(this.data.numbers).get().then(res => {
-            if (res.data.length == 0) {
-                wx.showToast({
-                    title: '没有别的地点了！',
-                    icon: 'none'
-                });
-            } else {
-                this.setData({
-                    stores: this.data.stores.concat(res.data),
-                    numbers: this.data.numbers + res.data.length
-                });
-            }
-        })
+    loadData: function(bottom) {
+        if (bottom) {
+            store.skip(this.data.numbers).get().then(res => {
+                if (res.data.length == 0) {
+                    wx.showToast({
+                        title: '没有别的地点了！',
+                        icon: 'none'
+                    });
+                } else {
+                    this.setData({
+                        stores: this.data.stores.concat(res.data),
+                        numbers: this.data.numbers + res.data.length
+                    });
+                }
+            })
+        } else {
+            store.get().then(res => {
+                if (res.data.length == 0) {
+                    wx.showToast({
+                        title: '没有别的地点了！',
+                        icon: 'none'
+                    });
+                } else {
+                    this.setData({
+                        stores: res.data,
+                        numbers:res.data.length
+                    });
+                }
+            })
+        }
     },
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function() {
-        this.loadData();
+        this.loadData(true);
     },
-    
+
     navigateToSearch: function(e) {
         wx.navigateTo({
             url: '../search/search',

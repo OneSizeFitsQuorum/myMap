@@ -25,20 +25,24 @@ Page({
     },
 
     loadData: function() {
-        console.log(this.data.keywords)
         store.skip(this.data.numbers).where({
-            notes: db.RegExp({
+            address: db.RegExp({
                 regexp: this.data.keywords,
                 options: 'i',
             })
         }).get().then(res => {
-            /**
-             * 如果没有数据，就提示没有商户了，并返回。
-             */
+            console.log(res)
             if (res.data.length == 0) {
-                this.setData({
-                    searched: true
-                })
+                if (this.data.searched) {
+                    this.setData({
+                        numbers: 0,
+                        stores: [],
+                    })
+                } else {
+                    this.setData({
+                        searched: true
+                    })
+                }
             } else {
                 this.setData({
                     stores: this.data.stores.concat(res.data),

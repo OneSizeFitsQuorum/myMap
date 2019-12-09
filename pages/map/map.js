@@ -3,7 +3,6 @@ const config = require('../../config.js');
 const db = wx.cloud.database()
 const store = db.collection('store');
 const userInfo = db.collection('userInfo');
-import Toast from '../../dist/toast/toast';
 
 Page({
     /**
@@ -77,9 +76,9 @@ Page({
             wx.setClipboardData({
                 data: res.result.openid,
                 success: res => {
-                    Toast.loading({
-                        message: 'OpenID已复制'
-                    });
+                    wx.showToast({
+                        title: 'OpenID已复制',
+                    })
                 }
             })
         })

@@ -5,11 +5,9 @@
     </cover-view>
     <!-- 搜索按钮 -->
     <cover-view wx:else class="cover">
-        <button class='button' bindtap='search'>搜索</button>
+        <button class='button' bindtap='search' bindlongpress='getOpenID' >搜索</button>
     </cover-view>
 
     <!-- 查看全部 -->
     <cover-view class="button all" bindtap="viewAll">全部</cover-view>
 </map>
-
-<van-toast id="van-toast" />
