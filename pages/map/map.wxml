@@ -1,13 +1,13 @@
 <map id="map" scale="{{defaultScale}}" longitude='{{longitude}}' latitude='{{latitude}}' style='height:{{windowHeight}}px' subkey="{{mapSubKey}}" markers="{{stores}}" show-compass="{{true}}" bindmarkertap="onMarkerTap">
     <!-- 添加入口 -->
     <cover-view class="cover" wx:if="{{isAdmin}}">
-        <button class='button' bindtap='manage' bindlongpress='getOpenID' >添加</button>
+        <button class='button' bindtap='manage' bindlongpress='getOpenID' >Add</button>
     </cover-view>
     <!-- 搜索按钮 -->
     <cover-view wx:else class="cover">
-        <button class='button' bindtap='search' bindlongpress='getOpenID' >搜索</button>
+        <button class='button' bindtap='search' bindlongpress='getOpenID' >Search</button>
     </cover-view>
 
     <!-- 查看全部 -->
-    <cover-view class="button all" bindtap="viewAll">全部</cover-view>
+    <cover-view class="button all" bindtap="viewAll">All</cover-view>
 </map>

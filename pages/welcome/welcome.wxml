@@ -8,7 +8,7 @@
         </view>
         <view class="bd">
             <view class="confirm-btn" bindtap='goToMap'>
-                <text>进入旅游地图</text>
+                <text>Enter</text>
             </view>
         </view>
     </view>

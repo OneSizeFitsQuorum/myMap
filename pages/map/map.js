@@ -27,7 +27,7 @@ Page({
 
     onShow: function() {
         wx.showLoading({
-            title: '加载数据中...',
+            title: 'Loading...',
         })
         this.listData()
         wx.hideLoading();
@@ -77,7 +77,7 @@ Page({
                 data: res.result.openid,
                 success: res => {
                     wx.showToast({
-                        title: 'OpenID已复制',
+                        title: 'OpenID Copyed',
                     })
                 }
             })

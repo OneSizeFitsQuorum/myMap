@@ -10,7 +10,7 @@ Page({
     goToMap: function() {
         Toast.loading({
             mask: true,
-            message: '加载地图中...'
+            message: 'Loading...'
         });
         let info = wx.getSystemInfoSync();
         wx.cloud.callFunction({

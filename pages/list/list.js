@@ -22,7 +22,7 @@ Page({
             store.skip(this.data.numbers).get().then(res => {
                 if (res.data.length == 0) {
                     wx.showToast({
-                        title: '没有别的地点了！',
+                      title: 'There is no other place!',
                         icon: 'none'
                     });
                 } else {
@@ -36,7 +36,7 @@ Page({
             store.get().then(res => {
                 if (res.data.length == 0) {
                     wx.showToast({
-                        title: '没有别的地点了！',
+                      title: 'There is no other place!',
                         icon: 'none'
                     });
                 } else {

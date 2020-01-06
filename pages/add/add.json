@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "Add",
     "usingComponents": {
         "van-button": "../../dist/button/index",
         "van-uploader": "../../dist/uploader/index",

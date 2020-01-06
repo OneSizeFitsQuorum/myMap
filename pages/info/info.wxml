@@ -9,7 +9,7 @@
 
 <view>
     <view class="address">
-        想法:</view>
+        Feeling:</view>
     <view class="notes">
         {{store.notes}}</view>
 </view>

@@ -8,7 +8,7 @@ Page({
 
     onLoad: function(options) {
         wx.showLoading({
-            title: '加载中...',
+            title: 'Loading...',
         })
         store.doc(options.id).get().then(res => {
             console.log(res.data.images)
@@ -37,13 +37,13 @@ Page({
 
     deleteItem: function(e) {
         wx.showModal({
-            title: '删除确认',
-            content: '您真的要删除么？',
+            title: 'Delete Confirm',
+          content: 'Do you really want to delete it?',
             success: res => {
                 if (res.confirm) {
                     store.doc(this.data.store._id).remove().then(res => {
                         wx.showToast({
-                            title: '删除成功',
+                            title: 'Delete succeed!',
                             icon: 'success',
                             success: res => {
                                 wx.navigateBack({
@@ -53,7 +53,7 @@ Page({
                         })
                     }).catch(error => {
                         wx.showToast({
-                            title: '删除失败！',
+                          title: 'Delete failed!',
                             icon: 'fail',
                         })
                     })

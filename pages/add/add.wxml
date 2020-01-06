@@ -1,13 +1,13 @@
 <form report-submit='true' onsubmit="createItem">
-    <view class='desc'>个人想法</view>
+    <view class='desc'>Feeling</view>
     <view class='all'>
-        <textarea placeholder="这一刻的想法..." name="notes" value="{{notes}}"></textarea>
+        <textarea placeholder="Feeling..." name="notes" value="{{notes}}"></textarea>
          <view class='desc'></view>
         <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="delete" max-count='9' multiple />
     </view>
-    <button  type="primary"  bindtap="chooseLocation">地图选址</button>
+    <button  type="primary"  bindtap="chooseLocation">Map</button>
     <view class='desc'></view>
-    <button type="primary"  form-type='submit'>创建</button>
+    <button type="primary"  form-type='submit'>Create</button>
 </form>
 
 <van-toast id="van-toast" />

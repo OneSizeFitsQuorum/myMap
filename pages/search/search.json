@@ -1,5 +1,5 @@
 {
-    "navigationBarTitleText": "搜索",
+    "navigationBarTitleText": "Search",
     "usingComponents": {
         "van-search": "../../dist/search/index"
     }

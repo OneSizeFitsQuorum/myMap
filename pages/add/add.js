@@ -54,22 +54,22 @@ Page({
     createItem: function(event) {
         let value = event.detail.value
         if (!value.notes){
-            Toast.fail('请输入感想');
+            Toast.fail('Please input your feeling!');
             return
         }
         if (!this.data.latitude ){
-            Toast.fail('请地图选址');
+            Toast.fail('Please choose your location!');
             return
         }
         console.log(this.data.fileList)
         if (this.data.fileList.length == 0) {
-            Toast.fail('请上传图片');
+            Toast.fail('Please upload your images!');
             return
         }
         Toast.loading({
             duration: 0,
             mask: true,
-            message: '加载中...'
+            message: 'Loading...'
         });
         let items = this.data.fileList
         const uploadTask = items.map(item => this.uploadPhoto(item.path))
@@ -99,7 +99,7 @@ Page({
                         images: files
                     }
                 }).then(res => {
-                    Toast.success('创建成功');
+                    Toast.success('Create succeed!');
                     setTimeout(function () {
                         wx.navigateBack({})
                     }, 1000);
@@ -109,7 +109,7 @@ Page({
             })
 
         }).catch(() => {
-            Toast.fail('创建失败');
+            Toast.fail('Create failed');
             return 
         })
   

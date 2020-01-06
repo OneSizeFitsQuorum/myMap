@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
 	"appid": "wx5976faf069292979",
-	"projectname": "miniprogram-1",
+	"projectname": "map",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

@@ -1,5 +1,5 @@
 
-<button class="search_input"  bindtap="navigateToSearch" >点我开始搜索</button>
+<button class="search_input"  bindtap="navigateToSearch" >Touch me to search</button>
 <block wx:for="{{stores}}" wx:key="_id">
     <navigator url="../info/info?id={{item._id}}">
         <view class="card">
