@@ -16,11 +16,11 @@
 
 
 <block wx:if="{{isAdmin}}">
-    <button class='button copy_path' bindtap='navigate'>导航</button>
-    <button class='button delete_item' bindtap='deleteItem'>删除</button>
+    <button class='button copy_path' bindtap='navigate'>Directions</button>
+    <button class='button delete_item' bindtap='deleteItem'>Delete</button>
 </block>
 <block wx:else>
     <view class="navigateBox">
-        <button class='button navigate' bindtap='navigate'>导航</button>
+        <button class='button navigate' bindtap='navigate'>Directions</button>
     </view>
 </block>
